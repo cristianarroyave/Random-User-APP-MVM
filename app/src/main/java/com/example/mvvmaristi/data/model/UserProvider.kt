@@ -1,7 +1,7 @@
 package com.example.mvvmaristi.data.model
 
-class UserProvider {
-    companion object {
-        var randomUsers:List<UserModel> = emptyList()
-    }
+import javax.inject.Inject
+
+class UserProvider @Inject constructor(){
+    var randomUsers:List<UserModel> = emptyList()
 }

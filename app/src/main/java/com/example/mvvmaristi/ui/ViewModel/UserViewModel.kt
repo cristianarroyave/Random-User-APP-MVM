@@ -6,22 +6,20 @@ import androidx.lifecycle.viewModelScope
 import com.example.mvvmaristi.data.model.UserModel
 import com.example.mvvmaristi.data.model.UserProvider
 import com.example.mvvmaristi.domain.RandomUsersUseCase
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class UserViewModel : ViewModel() {
+@HiltViewModel
+class UserViewModel @Inject constructor(
+    private val getRandomUsersUseCase:RandomUsersUseCase
+): ViewModel() {
 
     val userModel = MutableLiveData<List<UserModel>>()
-    var getRandomUsersUseCase = RandomUsersUseCase()
 
     init {
         onCreate()
     }
-
-    /*fun randomUsers(): List<UserModel>{
-        val currentUsers = UserProvider.randomUsers
-        userModel.postValue(currentUsers)
-        return currentUsers
-    }*/
 
     fun onCreate() {
         viewModelScope.launch {
