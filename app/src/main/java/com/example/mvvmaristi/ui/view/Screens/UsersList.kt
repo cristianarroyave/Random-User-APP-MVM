@@ -9,6 +9,8 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -21,6 +23,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.em
 import androidx.compose.ui.unit.sp
+import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import coil.compose.rememberImagePainter
 import com.example.mvvmaristi.R
@@ -33,7 +37,8 @@ import com.google.accompanist.swiperefresh.rememberSwipeRefreshState
 
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
-fun ListsUsers(userList: List<UserModel>, viewModel: UserViewModel, navController: NavController) {
+fun ListsUsers(userViewModel: UserViewModel = hiltViewModel(),navController: NavController) {
+    val userList by userViewModel.userModel.observeAsState(initial = emptyList())
     Scaffold(
         topBar = {
             TopAppBar(
@@ -42,7 +47,7 @@ fun ListsUsers(userList: List<UserModel>, viewModel: UserViewModel, navControlle
         },
         content = {
             SwipeRefresh(state = rememberSwipeRefreshState(isRefreshing = false), onRefresh = {
-                viewModel.onCreate()
+                userViewModel.onCreate()
             }, indicator = {state, refreshTrigger ->  SwipeRefreshIndicator(
                 state = state,
                 refreshTriggerDistance = refreshTrigger,
@@ -50,7 +55,7 @@ fun ListsUsers(userList: List<UserModel>, viewModel: UserViewModel, navControlle
             )
             }){
                 LazyColumn{
-                    items(userList){
+                    items(userList!!){
                         Card(
                             shape = RoundedCornerShape(8.dp),
                             modifier = Modifier

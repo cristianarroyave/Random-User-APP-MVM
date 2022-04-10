@@ -4,7 +4,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.mvvmaristi.data.model.UserModel
-import com.example.mvvmaristi.data.model.UserProvider
 import com.example.mvvmaristi.domain.RandomUsersUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
