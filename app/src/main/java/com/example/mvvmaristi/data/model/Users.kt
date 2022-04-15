@@ -8,5 +8,9 @@ data class Users(
     @SerializedName("name")
     val name: Name,
     @SerializedName("picture")
-    val picture: Picture
+    val picture: Picture,
+    @SerializedName("registered")
+    val registered: Registered,
+    @SerializedName("location")
+    val location: Location
 )
