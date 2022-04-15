@@ -1,4 +1,4 @@
-package com.example.mvvmaristi.domain.navigation
+package com.example.mvvmaristi.ui.navigation
 
 sealed class AppScreens(val route: String){
     object ListsScreen: AppScreens("listScreen")

@@ -21,7 +21,6 @@ class RandomUserService @Inject constructor(
                     userList.add(UserModel(user.name.first + " " + user.name.last, user.email, user.picture.large))
                 }
             }
-
             userList.toList()
         }
     }

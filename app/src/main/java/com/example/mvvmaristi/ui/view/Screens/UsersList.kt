@@ -24,12 +24,10 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.em
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
-import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import coil.compose.rememberImagePainter
 import com.example.mvvmaristi.R
-import com.example.mvvmaristi.data.model.UserModel
-import com.example.mvvmaristi.domain.navigation.AppScreens
+import com.example.mvvmaristi.ui.navigation.AppScreens
 import com.example.mvvmaristi.ui.ViewModel.UserViewModel
 import com.google.accompanist.swiperefresh.SwipeRefresh
 import com.google.accompanist.swiperefresh.SwipeRefreshIndicator
