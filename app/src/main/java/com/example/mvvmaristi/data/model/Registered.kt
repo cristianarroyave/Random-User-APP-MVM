@@ -6,5 +6,5 @@ data class Registered(
     @SerializedName("date")
     val date: String,
     @SerializedName("age")
-    val age: Int,
+    val age: Int
 )
