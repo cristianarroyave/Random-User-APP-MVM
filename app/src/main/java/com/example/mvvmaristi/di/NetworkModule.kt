@@ -1,6 +1,8 @@
 package com.example.mvvmaristi.di
 
 import com.example.mvvmaristi.data.network.RandomUsersApiClient
+import com.google.firebase.ktx.Firebase
+import com.google.firebase.firestore.FirebaseFirestore
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -28,6 +30,13 @@ object NetworkModule {
     fun provideRandomUserApiClient(retrofit: Retrofit):RandomUsersApiClient
     {
         return retrofit.create(RandomUsersApiClient::class.java)
+    }
+
+    @Singleton
+    @Provides
+    fun provideFirebaseService() : FirebaseFirestore
+    {
+        return FirebaseFirestore.getInstance()
     }
 
 }

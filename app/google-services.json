@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1024277331869",
+    "project_id": "randomuserapp-24fbc",
+    "storage_bucket": "randomuserapp-24fbc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1024277331869:android:2565e85b684f0ec517f974",
+        "android_client_info": {
+          "package_name": "com.example.mvvmaristi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1024277331869-m8laqsihr9s1qiq2rr26168olqv39pdc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDi124g2GqGL5cNcqK1JucWcsFI0UVbQI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1024277331869-m8laqsihr9s1qiq2rr26168olqv39pdc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

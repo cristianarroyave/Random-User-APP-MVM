@@ -1,4 +1,4 @@
-package com.example.cleanarchitecture.model
+package com.example.mvvmaristi.data.model
 
 import com.google.gson.annotations.SerializedName
 
