@@ -1,6 +1,7 @@
 package com.example.mvvmaristi.di
 
 import com.example.mvvmaristi.data.network.RandomUsersApiClient
+import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.firestore.FirebaseFirestore
 import dagger.Module
@@ -36,6 +37,7 @@ object NetworkModule {
     @Provides
     fun provideFirebaseService() : FirebaseFirestore
     {
+        Firebase.database.reference
         return FirebaseFirestore.getInstance()
     }
 

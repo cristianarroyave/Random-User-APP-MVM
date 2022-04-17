@@ -1,11 +1,11 @@
 package com.example.mvvmaristi.data.model.fullUserInfo
 
 data class FullUserInfo(
-    val name: String,
-    val image: String,
-    val email: String,
-    val street: String,
-    val city: String,
-    val country: String,
-    val age: Int
+    val name: String = "Loading..",
+    val image: String = "Loading..",
+    val email: String = "Loading..",
+    val street: String = "Loading..",
+    val city: String = "Loading..",
+    val country: String = "Loading..",
+    val age: Int 
 )

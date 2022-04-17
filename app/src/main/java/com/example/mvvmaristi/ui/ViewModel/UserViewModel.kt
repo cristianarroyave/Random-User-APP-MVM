@@ -23,11 +23,9 @@ class UserViewModel @Inject constructor(
     fun onCreate() {
         viewModelScope.launch {
             val result = getRandomUsersUseCase()
-
             if(!result.isNullOrEmpty()){
                 userModel.postValue(result)
             }
-
         }
     }
 }
