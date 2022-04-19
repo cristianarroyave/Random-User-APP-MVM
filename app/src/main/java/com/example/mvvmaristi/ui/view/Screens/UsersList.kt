@@ -91,8 +91,7 @@ fun ListsUsers(userViewModel: UserViewModel = hiltViewModel(),navController: Nav
                                     }
                                 }
                                 Column(Modifier.padding(8.dp)) {
-                                    Text(it.email ?: "", maxLines = 1)
-
+                                    Text(it.email, maxLines = 1)
                                 }
                             }
                         }
